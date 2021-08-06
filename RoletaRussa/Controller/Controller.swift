@@ -8,6 +8,9 @@
 import UIKit
 import SCLAlertView
 
+protocol ControllerProtocol: AnyObject {
+    func showConta()
+}
 class Controller{
     
     private var myArray: [Pessoa] = []
@@ -15,6 +18,8 @@ class Controller{
     
     private var pessoaSorteada: Pessoa?
     var customCellNomes: CustomCellNomes = CustomCellNomes()
+    
+    weak var delegate: ControllerProtocol?
     
     
     var count: Int{
@@ -31,6 +36,9 @@ class Controller{
         let _pessoa: Pessoa =  Pessoa(id: ((self.myArray.last?.id ?? 0) + 1), nome: value, idImagem: myImageArray.randomElement() ?? "")
         self.myArray.append(_pessoa)
         
+    }
+    func limpaArray(){
+        self.myArray = []
     }
      /*
      Valida se o array esta vazio para saber qual celula usar.
@@ -63,15 +71,26 @@ class Controller{
             
             if self.myArray[indexPath.row].id == pessoaSorteada?.id{
                 let appearance = SCLAlertView.SCLAppearance(
-                    showCircularIcon: true
+                    
+                    kButtonFont: UIFont(name: "arial", size: 14)!, showCloseButton: false, showCircularIcon: true
                 )
                 let alertView = SCLAlertView(appearance: appearance)
                 let alertViewIcon = UIImage(named: pessoaSorteada?.idImagem ?? "") //Replace the IconImage text with the image name
+                alertView.addButton("OK", backgroundColor: .blue,textColor: .white) {
+                    alertView.dismiss(animated: true, completion: nil)
+                    self.myArray = []
+                    self.delegate?.showConta()
+                    
+                }
+                
                 alertView.showInfo("Parabéns! \(pessoaSorteada?.nome ?? "")", subTitle: "Você foi o premiado da rodada para pagar a conta!", circleIconImage: alertViewIcon)
+                
+      
             
             }else{
                 self.myArray.remove(at: indexPath.row)
             }
+            
             return true
         }
     }
@@ -80,15 +99,13 @@ class Controller{
 
 //MARK - ViewControllerDelegate
 extension ViewController: ViewControllerDelegate{
+    
     func criaAlert() {
-        
         SCLAlertView().showInfo("Informação", subTitle: "Botão Sortear não foi pressionado!")
-        
     }
     
     //Delegate para alterar status do botão da viewController
     func enableBtnSortear(contador: Int) {
-
         if contador > 1 {
             btnSortear.isEnabled =  true
         }

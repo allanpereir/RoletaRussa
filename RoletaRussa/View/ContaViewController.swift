@@ -7,13 +7,15 @@
 
 import UIKit
 
-class HitoricoViewController: UIViewController {
+class ContaViewController: UIViewController {
 
     @IBOutlet weak var historicoTableView: UITableView!
 
     @IBOutlet weak var labelValor: UILabel!
     
-    let historicoController: HitoricoController = HitoricoController()
+    let historicoController: ContaController = ContaController()
+    let controller: Controller = Controller()
+    
     
     @IBOutlet weak var labelQuantidade: UILabel!
     override func viewDidLoad() {
@@ -30,18 +32,24 @@ class HitoricoViewController: UIViewController {
         
     }
     
-
+    @IBAction func btnPagar(_ sender: UIButton) {
+        
+        controller.limpaArray()
+        self.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: true)
+    }
+    
 }
-extension HitoricoViewController: UITableViewDelegate, UITableViewDataSource{
+extension ContaViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return historicoController.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellHistorico: HistoricoTableViewCell? = historicoTableView.dequeueReusableCell(withIdentifier: "HistoricoTableViewCell", for: indexPath) as? HistoricoTableViewCell
+        let cellConta: HistoricoTableViewCell? = historicoTableView.dequeueReusableCell(withIdentifier: "HistoricoTableViewCell", for: indexPath) as? HistoricoTableViewCell
         
-        cellHistorico?.setup(value: historicoController.loadCurrentProduto(indexPah: indexPath) ?? nil, imageTipo: historicoController.getTipo(indexPah: indexPath))
-        return cellHistorico ?? UITableViewCell()
+        cellConta?.setup(value: historicoController.loadCurrentProduto(indexPah: indexPath) ?? nil, imageTipo: historicoController.getTipo(indexPah: indexPath))
+        return cellConta ?? UITableViewCell()
     }
 }

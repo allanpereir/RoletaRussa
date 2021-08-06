@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewControllerDelegate: AnyObject{
     func enableBtnSortear(contador: Int)
-    func criaAlert ()
+    func criaAlert ()    
 }
 class ViewController: UIViewController {
 
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         self.myTableView.delegate = self
         self.myTableView.dataSource = self
         self.textNome.delegate = self
+        
+        self.controller.delegate = self
         
         // Do any additional setup after loading the view.
         self.myTableView.register(UINib(nibName: "EmptyCustomCell", bundle: nil), forCellReuseIdentifier: "EmptyCustomCell")
@@ -84,12 +86,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 extension ViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
         controller.addPessoa(value: textNome.text ?? "")
         
         self.myTableView.reloadData()
-        self.textNome.text = " "
+        self.textNome.text = nil
         textNome.resignFirstResponder()
     
         return true
+    }
+}
+extension ViewController: ControllerProtocol{
+    func showConta() {
+        performSegue(withIdentifier: "ContaViewController", sender: nil)
+        self.myTableView.reloadData()
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class HitoricoController{
+class ContaController{
     
     private var dadosJSON: dataRecord?
     

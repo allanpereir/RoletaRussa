@@ -11,10 +11,12 @@
 		BC28763F26B5CD22006A55BB /* importArquivoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */; };
 		BC28764126B5CE0E006A55BB /* JSONData.json in Resources */ = {isa = PBXBuildFile; fileRef = BC28764026B5CE0E006A55BB /* JSONData.json */; };
 		BC28764426B5CE59006A55BB /* DataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764326B5CE59006A55BB /* DataRecord.swift */; };
-		BC28764626B5D041006A55BB /* HitoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764526B5D041006A55BB /* HitoricoViewController.swift */; };
+		BC28764626B5D041006A55BB /* ContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764526B5D041006A55BB /* ContaViewController.swift */; };
 		BC28764D26B5F761006A55BB /* HistoricoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764B26B5F761006A55BB /* HistoricoTableViewCell.swift */; };
 		BC28764E26B5F761006A55BB /* HistoricoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC28764C26B5F761006A55BB /* HistoricoTableViewCell.xib */; };
-		BC28765226B60701006A55BB /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28765126B60701006A55BB /* HistoricoController.swift */; };
+		BC28765226B60701006A55BB /* ContaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28765126B60701006A55BB /* ContaController.swift */; };
+		BC5F661326BCC00B00449195 /* HistoricoDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F661226BCC00B00449195 /* HistoricoDataRecord.swift */; };
+		BC5F661526BCC17C00449195 /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F661426BCC17C00449195 /* HistoricoViewController.swift */; };
 		BC85F8C826B368A600BB4CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8C726B368A600BB4CD4 /* AppDelegate.swift */; };
 		BC85F8CA26B368A600BB4CD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8C926B368A600BB4CD4 /* SceneDelegate.swift */; };
 		BC85F8CC26B368A600BB4CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8CB26B368A600BB4CD4 /* ViewController.swift */; };
@@ -36,10 +38,13 @@
 		BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importArquivoJSON.swift; sourceTree = "<group>"; };
 		BC28764026B5CE0E006A55BB /* JSONData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONData.json; sourceTree = "<group>"; };
 		BC28764326B5CE59006A55BB /* DataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRecord.swift; sourceTree = "<group>"; };
-		BC28764526B5D041006A55BB /* HitoricoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitoricoViewController.swift; sourceTree = "<group>"; };
+		BC28764526B5D041006A55BB /* ContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaViewController.swift; sourceTree = "<group>"; };
 		BC28764B26B5F761006A55BB /* HistoricoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoTableViewCell.swift; sourceTree = "<group>"; };
 		BC28764C26B5F761006A55BB /* HistoricoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricoTableViewCell.xib; sourceTree = "<group>"; };
-		BC28765126B60701006A55BB /* HistoricoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
+		BC28765126B60701006A55BB /* ContaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaController.swift; sourceTree = "<group>"; };
+		BC5F661126BCBF4900449195 /* JSONDataHistorico.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JSONDataHistorico.json; sourceTree = "<group>"; };
+		BC5F661226BCC00B00449195 /* HistoricoDataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoDataRecord.swift; sourceTree = "<group>"; };
+		BC5F661426BCC17C00449195 /* HistoricoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		BC85F8C426B368A600BB4CD4 /* RoletaRussa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoletaRussa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC85F8C726B368A600BB4CD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC85F8C926B368A600BB4CD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +85,7 @@
 		BC28764226B5CE12006A55BB /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				BC5F661126BCBF4900449195 /* JSONDataHistorico.json */,
 				BC28764026B5CE0E006A55BB /* JSONData.json */,
 			);
 			path = Mock;
@@ -125,6 +131,7 @@
 			children = (
 				BC85F8E926B373DC00BB4CD4 /* Pessoa.swift */,
 				BC28764326B5CE59006A55BB /* DataRecord.swift */,
+				BC5F661226BCC00B00449195 /* HistoricoDataRecord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,7 +141,8 @@
 			children = (
 				BC85F8E626B3738100BB4CD4 /* CustomView */,
 				BC85F8CB26B368A600BB4CD4 /* ViewController.swift */,
-				BC28764526B5D041006A55BB /* HitoricoViewController.swift */,
+				BC28764526B5D041006A55BB /* ContaViewController.swift */,
+				BC5F661426BCC17C00449195 /* HistoricoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -144,7 +152,7 @@
 			children = (
 				BC85F8E726B373BD00BB4CD4 /* Controller.swift */,
 				BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */,
-				BC28765126B60701006A55BB /* HistoricoController.swift */,
+				BC28765126B60701006A55BB /* ContaController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,12 +299,14 @@
 				BC28764426B5CE59006A55BB /* DataRecord.swift in Sources */,
 				BC85F8CC26B368A600BB4CD4 /* ViewController.swift in Sources */,
 				BC85F8C826B368A600BB4CD4 /* AppDelegate.swift in Sources */,
-				BC28764626B5D041006A55BB /* HitoricoViewController.swift in Sources */,
+				BC5F661326BCC00B00449195 /* HistoricoDataRecord.swift in Sources */,
+				BC28764626B5D041006A55BB /* ContaViewController.swift in Sources */,
 				BC85F8E026B36E0700BB4CD4 /* EmptyCustomCell.swift in Sources */,
 				BC85F8E826B373BD00BB4CD4 /* Controller.swift in Sources */,
 				BC28764D26B5F761006A55BB /* HistoricoTableViewCell.swift in Sources */,
+				BC5F661526BCC17C00449195 /* HistoricoViewController.swift in Sources */,
 				BC85F8CA26B368A600BB4CD4 /* SceneDelegate.swift in Sources */,
-				BC28765226B60701006A55BB /* HistoricoController.swift in Sources */,
+				BC28765226B60701006A55BB /* ContaController.swift in Sources */,
 				BC85F8EA26B373DC00BB4CD4 /* Pessoa.swift in Sources */,
 				BC28763F26B5CD22006A55BB /* importArquivoJSON.swift in Sources */,
 				BC85F8E426B3713E00BB4CD4 /* CustomCellNomes.swift in Sources */,

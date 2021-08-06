@@ -28,6 +28,9 @@
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEf-lk-Wwu">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                     </textField>
@@ -42,8 +45,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-0Z-CgM">
-                                <rect key="frame" x="50" y="336" width="314" height="477"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-0Z-CgM">
+                                <rect key="frame" x="0.0" y="336" width="414" height="477"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <sections/>
                             </tableView>
@@ -52,7 +55,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d6W-0Z-CgM" firstAttribute="top" secondItem="aMv-Wk-lS4" secondAttribute="bottom" constant="50" id="5gh-3K-0qd"/>
-                            <constraint firstItem="d6W-0Z-CgM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="5pO-Ef-s97"/>
+                            <constraint firstItem="d6W-0Z-CgM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5pO-Ef-s97"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aMv-Wk-lS4" secondAttribute="trailing" constant="50" id="WpH-Sc-vco"/>
                             <constraint firstItem="aMv-Wk-lS4" firstAttribute="top" secondItem="VZI-6r-VoX" secondAttribute="bottom" constant="10" id="YeK-AZ-cgf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZI-6r-VoX" secondAttribute="trailing" constant="80" id="Z1z-Ok-wyw"/>
@@ -60,7 +63,7 @@
                             <constraint firstItem="VZI-6r-VoX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oUA-xl-agI"/>
                             <constraint firstItem="VZI-6r-VoX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="pg5-0A-4D6"/>
                             <constraint firstItem="aMv-Wk-lS4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="tWD-8c-raI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d6W-0Z-CgM" secondAttribute="trailing" constant="50" id="zq0-WQ-88j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d6W-0Z-CgM" secondAttribute="trailing" id="zq0-WQ-88j"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Roleta" image="line.3.crossed.swirl.circle" catalog="system" id="Ciz-2r-iOP"/>
@@ -68,6 +71,7 @@
                         <outlet property="btnSortear" destination="rm3-cw-Vns" id="fdL-X9-qU4"/>
                         <outlet property="myTableView" destination="d6W-0Z-CgM" id="ZQ1-lX-Q9w"/>
                         <outlet property="textNome" destination="zEf-lk-Wwu" id="hzd-vk-LuM"/>
+                        <segue destination="rUS-pf-EeP" kind="show" identifier="ContaViewController" id="qEq-bp-tkh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,9 +79,40 @@
             <point key="canvasLocation" x="1042.0289855072465" y="114.50892857142857"/>
         </scene>
         <!--Historico-->
+        <scene sceneID="PpB-sq-dNT">
+            <objects>
+                <viewController id="ebG-I9-h5Y" customClass="HistoricoViewController" customModule="RoletaRussa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9uj-SC-pyE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-Xy-Om2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CH3-0a-kaU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CO3-Xy-Om2" firstAttribute="top" secondItem="CH3-0a-kaU" secondAttribute="top" id="Cip-B8-Dbf"/>
+                            <constraint firstItem="CH3-0a-kaU" firstAttribute="bottom" secondItem="CO3-Xy-Om2" secondAttribute="bottom" id="PcG-KH-Z57"/>
+                            <constraint firstItem="CH3-0a-kaU" firstAttribute="trailing" secondItem="CO3-Xy-Om2" secondAttribute="trailing" id="Q0y-2V-xiM"/>
+                            <constraint firstItem="CO3-Xy-Om2" firstAttribute="leading" secondItem="CH3-0a-kaU" secondAttribute="leading" id="vVN-yD-2YL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Historico" image="list.bullet.rectangle" catalog="system" id="Z95-vy-9xU"/>
+                    <connections>
+                        <outlet property="myTableView" destination="CO3-Xy-Om2" id="Upf-DW-E6z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MJ-qw-dKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="846"/>
+        </scene>
+        <!--Historico-->
         <scene sceneID="o8p-Oe-ce9">
             <objects>
-                <viewController id="rUS-pf-EeP" customClass="HitoricoViewController" customModule="RoletaRussa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="rUS-pf-EeP" customClass="ContaViewController" customModule="RoletaRussa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FKk-4M-Ny9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +136,9 @@
                                         <state key="normal" title="PAGAR">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnPagar:" destination="rUS-pf-EeP" eventType="touchUpInside" id="OJ0-BT-Whf"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acE-HP-Kv0">
                                         <rect key="frame" x="110" y="10" width="117" height="30"/>
@@ -112,7 +150,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4s-XF-czR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valor Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="y4s-XF-czR">
                                         <rect key="frame" x="287" y="10" width="117" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,6 +191,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Historico" image="list.bullet.rectangle" catalog="system" id="OYX-QU-5GR"/>
+                    <navigationItem key="navigationItem" id="baB-5K-p0B"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="historicoTableView" destination="L9Q-La-6zc" id="fw1-zZ-C9e"/>
@@ -161,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0a-zF-x58" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="842.41071428571422"/>
+            <point key="canvasLocation" x="1830" y="115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="O4P-24-peK">
@@ -176,7 +215,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="jfe-kl-NZh"/>
-                        <segue destination="rUS-pf-EeP" kind="relationship" relationship="viewControllers" id="r3G-cJ-K7W"/>
+                        <segue destination="ebG-I9-h5Y" kind="relationship" relationship="viewControllers" id="VfX-qF-mZ7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWF-07-NbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -194,6 +233,9 @@
         </namedColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
