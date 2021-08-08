@@ -80,12 +80,9 @@ class Controller{
                     alertView.dismiss(animated: true, completion: nil)
                     self.myArray = []
                     self.delegate?.showConta()
-                    
                 }
                 
                 alertView.showInfo("Parabéns! \(pessoaSorteada?.nome ?? "")", subTitle: "Você foi o premiado da rodada para pagar a conta!", circleIconImage: alertViewIcon)
-                
-      
             
             }else{
                 self.myArray.remove(at: indexPath.row)

@@ -2,36 +2,24 @@
 //  HistoricoController.swift
 //  RoletaRussa
 //
-//  Created by Alan Silva on 31/07/21.
+//  Created by Alan Silva on 06/08/21.
 //
 
 import Foundation
 
-class ContaController{
+class HistoricoController{
     
-    private var dadosJSON: dataRecord?
+    private var dadosJSON: historicoDataRecord?
     
-//    let historicoController: Controller = Controller()
-    
-    var count: Int {
-        return dadosJSON?.productList.count ?? 0
-    }
-    var valorConta: Double{
-        //return dadosJSON?.totalValue ?? 10.00
-        return dadosJSON?.totalValue ?? 1.00
+    var countHistorico: Int{ 
+        return dadosJSON?.historyAccountList.count ?? 0
+        
     }
     
-    func loadCurrentProduto(indexPah: IndexPath) -> produto?{
-        return self.dadosJSON?.productList[indexPah.row]
+    func loadHistorico(indexPath: IndexPath) -> historico?{        
+        return self.dadosJSON?.historyAccountList[indexPath.row]
     }
     
-    func getTipo(indexPah: IndexPath) -> String{
-        if self.dadosJSON?.productList[indexPah.row].productType == "BEBIDA" {
-            return "beer"
-        }else {
-            return "dish"
-        }
-    }
     
     /// Parse the jsonData using the JSONDecoder with help of sampleRecord model
     /// - Parameter jsonData: jsonData object
@@ -60,9 +48,9 @@ class ContaController{
     
     /// Parse the jsonData using the JSONDecoder with help of sampleRecord model
     /// - Parameter jsonData: jsonData object
-    func parse(jsonData: Data) -> dataRecord? {
+    func parse(jsonData: Data) -> historicoDataRecord? {
         do {
-            let decoderData = try JSONDecoder().decode(dataRecord.self, from: jsonData)
+            let decoderData = try JSONDecoder().decode(historicoDataRecord.self, from: jsonData)
             return decoderData
         }catch {
             print("erro:\(error)")
@@ -71,3 +59,4 @@ class ContaController{
     }
 
 }
+

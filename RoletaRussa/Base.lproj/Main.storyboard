@@ -88,7 +88,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CO3-Xy-Om2">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CH3-0a-kaU"/>
@@ -194,7 +194,7 @@
                     <navigationItem key="navigationItem" id="baB-5K-p0B"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="historicoTableView" destination="L9Q-La-6zc" id="fw1-zZ-C9e"/>
+                        <outlet property="contaTableView" destination="L9Q-La-6zc" id="fw1-zZ-C9e"/>
                         <outlet property="labelValor" destination="y4s-XF-czR" id="eAR-lT-5Of"/>
                     </connections>
                 </viewController>

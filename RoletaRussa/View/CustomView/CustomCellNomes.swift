@@ -27,6 +27,4 @@ class CustomCellNomes: UITableViewCell {
         self.perfilImage.image = UIImage(named: value.idImagem)
         self.labelNome.text = value.nome
     }
-    
-    
 }

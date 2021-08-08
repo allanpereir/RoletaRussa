@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		58B19414533DAF3BAC3DAFD6 /* Pods_RoletaRussa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423FE214A67D4F89BC87FD3A /* Pods_RoletaRussa.framework */; };
-		BC28763F26B5CD22006A55BB /* importArquivoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */; };
 		BC28764126B5CE0E006A55BB /* JSONData.json in Resources */ = {isa = PBXBuildFile; fileRef = BC28764026B5CE0E006A55BB /* JSONData.json */; };
 		BC28764426B5CE59006A55BB /* DataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764326B5CE59006A55BB /* DataRecord.swift */; };
 		BC28764626B5D041006A55BB /* ContaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764526B5D041006A55BB /* ContaViewController.swift */; };
-		BC28764D26B5F761006A55BB /* HistoricoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764B26B5F761006A55BB /* HistoricoTableViewCell.swift */; };
-		BC28764E26B5F761006A55BB /* HistoricoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC28764C26B5F761006A55BB /* HistoricoTableViewCell.xib */; };
+		BC28764D26B5F761006A55BB /* ContaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28764B26B5F761006A55BB /* ContaTableViewCell.swift */; };
+		BC28764E26B5F761006A55BB /* ContaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC28764C26B5F761006A55BB /* ContaTableViewCell.xib */; };
 		BC28765226B60701006A55BB /* ContaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC28765126B60701006A55BB /* ContaController.swift */; };
+		BC338BF126C00CC600B592EA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC338BEF26C00CC600B592EA /* HistoryTableViewCell.swift */; };
+		BC338BF226C00CC600B592EA /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC338BF026C00CC600B592EA /* HistoryTableViewCell.xib */; };
+		BC338BF426C0179000B592EA /* JSONDataHistorico.json in Resources */ = {isa = PBXBuildFile; fileRef = BC338BF326C0179000B592EA /* JSONDataHistorico.json */; };
 		BC5F661326BCC00B00449195 /* HistoricoDataRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F661226BCC00B00449195 /* HistoricoDataRecord.swift */; };
 		BC5F661526BCC17C00449195 /* HistoricoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5F661426BCC17C00449195 /* HistoricoViewController.swift */; };
 		BC85F8C826B368A600BB4CD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8C726B368A600BB4CD4 /* AppDelegate.swift */; };
@@ -29,20 +31,22 @@
 		BC85F8E526B3713E00BB4CD4 /* CustomCellNomes.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC85F8E326B3713E00BB4CD4 /* CustomCellNomes.xib */; };
 		BC85F8E826B373BD00BB4CD4 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8E726B373BD00BB4CD4 /* Controller.swift */; };
 		BC85F8EA26B373DC00BB4CD4 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85F8E926B373DC00BB4CD4 /* Pessoa.swift */; };
+		BCA38BEE26BD5A55006E179A /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA38BED26BD5A55006E179A /* HistoricoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3117BA4E84C1DAB3B3804832 /* Pods-RoletaRussa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoletaRussa.debug.xcconfig"; path = "Target Support Files/Pods-RoletaRussa/Pods-RoletaRussa.debug.xcconfig"; sourceTree = "<group>"; };
 		423FE214A67D4F89BC87FD3A /* Pods_RoletaRussa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RoletaRussa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		999D1A661FCA3A84C299B29A /* Pods-RoletaRussa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoletaRussa.release.xcconfig"; path = "Target Support Files/Pods-RoletaRussa/Pods-RoletaRussa.release.xcconfig"; sourceTree = "<group>"; };
-		BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = importArquivoJSON.swift; sourceTree = "<group>"; };
 		BC28764026B5CE0E006A55BB /* JSONData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONData.json; sourceTree = "<group>"; };
 		BC28764326B5CE59006A55BB /* DataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRecord.swift; sourceTree = "<group>"; };
 		BC28764526B5D041006A55BB /* ContaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaViewController.swift; sourceTree = "<group>"; };
-		BC28764B26B5F761006A55BB /* HistoricoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoTableViewCell.swift; sourceTree = "<group>"; };
-		BC28764C26B5F761006A55BB /* HistoricoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricoTableViewCell.xib; sourceTree = "<group>"; };
+		BC28764B26B5F761006A55BB /* ContaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaTableViewCell.swift; sourceTree = "<group>"; };
+		BC28764C26B5F761006A55BB /* ContaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContaTableViewCell.xib; sourceTree = "<group>"; };
 		BC28765126B60701006A55BB /* ContaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContaController.swift; sourceTree = "<group>"; };
-		BC5F661126BCBF4900449195 /* JSONDataHistorico.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JSONDataHistorico.json; sourceTree = "<group>"; };
+		BC338BEF26C00CC600B592EA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		BC338BF026C00CC600B592EA /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		BC338BF326C0179000B592EA /* JSONDataHistorico.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSONDataHistorico.json; sourceTree = "<group>"; };
 		BC5F661226BCC00B00449195 /* HistoricoDataRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoDataRecord.swift; sourceTree = "<group>"; };
 		BC5F661426BCC17C00449195 /* HistoricoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoViewController.swift; sourceTree = "<group>"; };
 		BC85F8C426B368A600BB4CD4 /* RoletaRussa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoletaRussa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +63,7 @@
 		BC85F8E326B3713E00BB4CD4 /* CustomCellNomes.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCellNomes.xib; sourceTree = "<group>"; };
 		BC85F8E726B373BD00BB4CD4 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		BC85F8E926B373DC00BB4CD4 /* Pessoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		BCA38BED26BD5A55006E179A /* HistoricoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +90,8 @@
 		BC28764226B5CE12006A55BB /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				BC5F661126BCBF4900449195 /* JSONDataHistorico.json */,
 				BC28764026B5CE0E006A55BB /* JSONData.json */,
+				BC338BF326C0179000B592EA /* JSONDataHistorico.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -151,8 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				BC85F8E726B373BD00BB4CD4 /* Controller.swift */,
-				BC28763E26B5CD22006A55BB /* importArquivoJSON.swift */,
 				BC28765126B60701006A55BB /* ContaController.swift */,
+				BCA38BED26BD5A55006E179A /* HistoricoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,8 +169,10 @@
 				BC85F8DE26B36E0700BB4CD4 /* EmptyCustomCell.swift */,
 				BC85F8E226B3713E00BB4CD4 /* CustomCellNomes.swift */,
 				BC85F8E326B3713E00BB4CD4 /* CustomCellNomes.xib */,
-				BC28764B26B5F761006A55BB /* HistoricoTableViewCell.swift */,
-				BC28764C26B5F761006A55BB /* HistoricoTableViewCell.xib */,
+				BC28764B26B5F761006A55BB /* ContaTableViewCell.swift */,
+				BC28764C26B5F761006A55BB /* ContaTableViewCell.xib */,
+				BC338BEF26C00CC600B592EA /* HistoryTableViewCell.swift */,
+				BC338BF026C00CC600B592EA /* HistoryTableViewCell.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -240,9 +247,11 @@
 				BC85F8D426B368AA00BB4CD4 /* LaunchScreen.storyboard in Resources */,
 				BC28764126B5CE0E006A55BB /* JSONData.json in Resources */,
 				BC85F8E526B3713E00BB4CD4 /* CustomCellNomes.xib in Resources */,
-				BC28764E26B5F761006A55BB /* HistoricoTableViewCell.xib in Resources */,
+				BC28764E26B5F761006A55BB /* ContaTableViewCell.xib in Resources */,
 				BC85F8D126B368AA00BB4CD4 /* Assets.xcassets in Resources */,
+				BC338BF426C0179000B592EA /* JSONDataHistorico.json in Resources */,
 				BC85F8E126B36E0700BB4CD4 /* EmptyCustomCell.xib in Resources */,
+				BC338BF226C00CC600B592EA /* HistoryTableViewCell.xib in Resources */,
 				BC85F8CF26B368A600BB4CD4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,13 +312,14 @@
 				BC28764626B5D041006A55BB /* ContaViewController.swift in Sources */,
 				BC85F8E026B36E0700BB4CD4 /* EmptyCustomCell.swift in Sources */,
 				BC85F8E826B373BD00BB4CD4 /* Controller.swift in Sources */,
-				BC28764D26B5F761006A55BB /* HistoricoTableViewCell.swift in Sources */,
+				BC28764D26B5F761006A55BB /* ContaTableViewCell.swift in Sources */,
 				BC5F661526BCC17C00449195 /* HistoricoViewController.swift in Sources */,
+				BC338BF126C00CC600B592EA /* HistoryTableViewCell.swift in Sources */,
 				BC85F8CA26B368A600BB4CD4 /* SceneDelegate.swift in Sources */,
 				BC28765226B60701006A55BB /* ContaController.swift in Sources */,
 				BC85F8EA26B373DC00BB4CD4 /* Pessoa.swift in Sources */,
-				BC28763F26B5CD22006A55BB /* importArquivoJSON.swift in Sources */,
 				BC85F8E426B3713E00BB4CD4 /* CustomCellNomes.swift in Sources */,
+				BCA38BEE26BD5A55006E179A /* HistoricoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

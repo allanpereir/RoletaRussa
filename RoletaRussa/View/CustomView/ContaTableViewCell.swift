@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HistoricoTableViewCell: UITableViewCell {
+class ContaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelQtd: UILabel!
     @IBOutlet weak var labelItem: UILabel!
@@ -30,7 +30,7 @@ class HistoricoTableViewCell: UITableViewCell {
         if value != nil {
             self.labelQtd.text = "\(value!.quantity)"
             self.labelItem.text = value!.name
-            self.labelValor.text = String(format: "%.2f", value!.price)
+            self.labelValor.text = "R$ \(String(format: "%.2f", value!.price))"
             self.imagemItem.image = UIImage(named: imageTipo)
         }
     }

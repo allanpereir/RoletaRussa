@@ -14,8 +14,8 @@
             filePath = "RoletaRussa/Controller/Controller.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "enableBtnSortear(contador:)"
             landmarkType = "7">
          </BreakpointContent>

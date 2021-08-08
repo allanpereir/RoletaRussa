@@ -9,11 +9,11 @@ import UIKit
 
 class ContaViewController: UIViewController {
 
-    @IBOutlet weak var historicoTableView: UITableView!
+    @IBOutlet weak var contaTableView: UITableView!
 
     @IBOutlet weak var labelValor: UILabel!
     
-    let historicoController: ContaController = ContaController()
+    let contaController: ContaController = ContaController()
     let controller: Controller = Controller()
     
     
@@ -21,15 +21,17 @@ class ContaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        historicoController.importaData()
-
-        self.historicoTableView.dataSource = self
-        self.historicoTableView.delegate = self
-        self.historicoTableView.register(UINib(nibName: "HistoricoTableViewCell", bundle: nil), forCellReuseIdentifier: "HistoricoTableViewCell")
         
-        self.labelValor.text =  String(format: "%.2f", historicoController.valor)
+        contaController.importaData(value: "JSONData")
+        self.contaTableView.dataSource = self
+        self.contaTableView.delegate = self
+        self.contaTableView.register(UINib(nibName: "ContaTableViewCell", bundle: nil), forCellReuseIdentifier: "ContaTableViewCell")
+        
+        self.labelValor.text =  "R$ \(String(format: "%.2f", contaController.valorConta))"
         self.tabBarController?.tabBar.isHidden = true
         
+        
+       
     }
     
     @IBAction func btnPagar(_ sender: UIButton) {
@@ -43,13 +45,13 @@ class ContaViewController: UIViewController {
 extension ContaViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return historicoController.count
+        return contaController.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellConta: HistoricoTableViewCell? = historicoTableView.dequeueReusableCell(withIdentifier: "HistoricoTableViewCell", for: indexPath) as? HistoricoTableViewCell
+        let cellConta: ContaTableViewCell? = contaTableView.dequeueReusableCell(withIdentifier: "ContaTableViewCell", for: indexPath) as? ContaTableViewCell
         
-        cellConta?.setup(value: historicoController.loadCurrentProduto(indexPah: indexPath) ?? nil, imageTipo: historicoController.getTipo(indexPah: indexPath))
+        cellConta?.setup(value: contaController.loadCurrentProduto(indexPah: indexPath) ?? nil, imageTipo: contaController.getTipo(indexPah: indexPath))
         return cellConta ?? UITableViewCell()
     }
 }
